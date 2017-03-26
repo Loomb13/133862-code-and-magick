@@ -174,23 +174,30 @@
 </template>
 
 <script>
+  var fireballSize = 30;
+  var getFireballSpeed = function (left) {
+  if (left == true){
+    return 5;
+  }
+  else {
+    return 3;
+  }
+  }
+  var wizardSpeed = 3;
+  var wizardWidth = 70;
 
-var fireballSize = 22;
-var speed;
-var getFireballSpeed = function (left,) {};
-if getFireballSpeed true,
-speed = 5, else {
-  speed = 3
-}
-
-var  wizardSpeed = 3;
-var wizardWidth = 70;
-var getWizardHeight  = 1.337 * wizardWidth;
-var getWizardX = function (width) {};
-var getWizardY = function (height) {};
+// вопрос по функии. Что лучше - добавить wizardWidth какк параметр функцииб
+// или же оставить функцию без параметровб чтобы она использованла глобальную переменную?
+  var getWizardHeight  = function () {
+    return 1.337 * wizardWidth;
+  }
+  function getWizardX (width) {
+   return width / 2;
+  }
+  function getWizardY (height) {
+    return height / 3;
+  }
 </script>
-
-
-<script src="path/to/game.js"></script>
+<script src="js/game.js"></script>
 </body>
 </html>
