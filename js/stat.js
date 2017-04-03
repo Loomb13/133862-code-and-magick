@@ -32,12 +32,12 @@ window.renderStatistics = function (ctx, names,times) {
   ctx.textBaseline = "bottom";
   ctx.fillStyle = 'rgba(0, 0, 255, 0.5)';
   for (var i=0; i<times.length; i++ ) {
-      var X=200+ 50 *i;//px
+      var initialX=200+ 50 *i;//px
       var initialY=100;//px
       var RectWidth=40;//px
       var BottomIndent= 20;//px
-      ctx.fillRect (X, initialY, RectWidth, times[i] * step);
-      ctx.fillText (names[i], X, initialY+histogramHeight+BottomIndent);
+      ctx.fillRect (initialX, initialY, RectWidth, times[i] * step);
+      ctx.fillText (names[i], initialX, initialY+histogramHeight+BottomIndent);
     }
 
 };
