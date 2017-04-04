@@ -24,14 +24,24 @@ window.renderStatistics = function (ctx, names,times) {
    };
 
   var histogramHeight =  40;
-  var step = histogramHeight /(max-0);
+  var step = histogramHeight /(max); //
+  var name = names[i];
 
   ctx.fillText('Список результатов:' + max.toFixed(0), 150,80,);
-  ctx.fillStyle ='rgba(255, 0, 0, 1)';
-  ctx.fillRect(150,100,40,times[0] * step);
+
   ctx.textBaseline = "bottom";
-  ctx.fillStyle = 'rgba(0, 0, 255, 0.5)';
+
+
+
   for (var i=0; i<times.length; i++ ) {
+
+    if (name = 'Вы') {
+      ctx.fillStyle ='rgba(255, 0, 0, 1)';
+    }
+    else { ctx.fillStyle = 'rgba(0, 0, 255, 0.5)';
+        ctx.fillRect(150,100,40,times[0] * step);
+      }
+
       var initialX=200+ 50 *i;//px
       var initialY=100;//px
       var RectWidth=40;//px
