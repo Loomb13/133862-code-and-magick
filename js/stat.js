@@ -26,7 +26,7 @@ window.renderStatistics = function (ctx, names,times) {
   var histogramHeight =  40;
   var step = histogramHeight /(max); //
 
-  ctx.fillText('Список результатов:' + max.toFixed(0), 150,80,);
+  ctx.fillText('Список результатов:' + max.toFixed(0), 150,80);
 
   ctx.textBaseline = "bottom";
 
