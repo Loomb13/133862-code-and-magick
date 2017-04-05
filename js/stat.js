@@ -10,7 +10,7 @@ window.renderStatistics = function (ctx, names,times) {
 
   ctx.fillStyle = '#000';
   ctx.font = '16px PT Mono';
-  ctx.fillText('Ура, вы победили!', 150,40,);
+  ctx.fillText('Ура, вы победили!', 150,40);
 
   var max = -1;
   var maxIndex =-1;
@@ -25,17 +25,16 @@ window.renderStatistics = function (ctx, names,times) {
 
   var histogramHeight =  40;
   var step = histogramHeight /(max); //
-  var name = names[i];
 
   ctx.fillText('Список результатов:' + max.toFixed(0), 150,80,);
 
   ctx.textBaseline = "bottom";
 
-
-
   for (var i=0; i<times.length; i++ ) {
+    var time = times[i];
+    var name = names[i];
 
-    if (name = 'Вы') {
+    if (name == 'Вы') {
       ctx.fillStyle ='rgba(255, 0, 0, 1)';
     }
     else { ctx.fillStyle = 'rgba(0, 0, 255, 0.5)';
