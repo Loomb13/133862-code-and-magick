@@ -153,6 +153,40 @@
                                                               width="130">Сделано в HTML Academy</a>в 2017 году</p>
 </footer>
 
++ <script>
+  var fireballSize = 30;
+  var getFireballSpeed = function (left) {
+    if (left === true){
+      return 5;
+    }
+    else {
+      return 3;
+    }
+  };
+
+  var wizardSpeed = 3;
+  var wizardWidth = 70;
+
+  // вопрос по функии. Что лучше - добавить wizardWidth какк параметр функцииб
+  // или же оставить функцию без параметровб чтобы она использованла глобальную переменную?
+  var getWizardHeight  = function () {
+    return 1.337 * wizardWidth;
+  }
+
+  function getWizardX (width) {
+  return width / 2;
+  }
+  function getWizardY (height) {
+    return height / 3;
+  }
+  </script>
+
+
+
+<script src = 'js/stat.js'></script>
+<script src = 'js/setup.js'></script>
+<script src = 'js/game.js'></script>
+
 <template id="similar-wizard-template" style="display: none">
   <div class="setup-similar-item">
     <div class="setup-similar-content">
