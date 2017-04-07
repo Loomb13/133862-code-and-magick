@@ -51,4 +51,4 @@ window.renderStatistics = function (ctx, names, times) {
 
 };
 
-var helloword  = 0;
+
