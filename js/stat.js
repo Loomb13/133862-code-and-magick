@@ -13,13 +13,11 @@ window.renderStatistics = function (ctx, names, times) {
   ctx.fillText('Ура, вы победили!', 150, 40);
 
   var max = -1;
-  var maxIndex = -1;
 
-  for (var i = 0; i < times.length; i++) {
-    var time = times[i];
+  for (var j = 0; j < times.length; j++) {
+    var time = times[j];
     if (time > max) {
       max = time; // запись максимального времени
-      maxIndex = i;// индекс сохраняем для самого худшего времени
     }
   }
 
@@ -31,7 +29,6 @@ window.renderStatistics = function (ctx, names, times) {
   ctx.textBaseline = 'bottom';
 
   for (var i = 0; i < times.length; i++) {
-    var time = times[i];
     var name = names[i];
 
     if (name === 'Вы') {
