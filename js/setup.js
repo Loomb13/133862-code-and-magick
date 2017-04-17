@@ -25,6 +25,7 @@ function getRandomElement(array) {
 }
 
 /**
+ *
  * @param {Object} wizard
  * @param {String} wizard.name
  * @param {String} wizard.coatColor
