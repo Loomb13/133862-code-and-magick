@@ -21,7 +21,7 @@ window.renderStatistics = function (ctx, names, times) {
   }
 
   var histogramHeight = 40;
-  var step = histogramHeight / (max); //
+  var step = histogramHeight / (max);
 
   ctx.fillText('Список результатов:' + max.toFixed(0), 150, 80);
 
@@ -36,12 +36,13 @@ window.renderStatistics = function (ctx, names, times) {
       ctx.fillStyle = 'rgba(0, 0, 255, 0.5)';
     }
 
-    var initialX = 200 + 50 * i;// px
-    var initialY = 100;// px
-    var RectWidth = 40;// px
-    var BottomIndent = 20;// px
+    var initialX = 200 + 50 * i;
+    var initialY = 100;
+    var RectWidth = 40;
+    var BottomIndent = 20;
     ctx.fillRect(initialX, initialY, RectWidth, times[i] * step);
     ctx.fillText(names[i], initialX, initialY + histogramHeight + BottomIndent);
   }
 
 };
+
